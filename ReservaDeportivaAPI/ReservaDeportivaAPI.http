@@ -1,0 +1,6 @@
+@ReservaDeportivaAPI_HostAddress = http://localhost:5249
+
+GET {{ReservaDeportivaAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
