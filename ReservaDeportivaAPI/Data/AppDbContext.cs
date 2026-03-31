@@ -1,18 +1,20 @@
 using Microsoft.EntityFrameworkCore;
-using ReservasDeportivasAPI.Models;
+using ReservaDeportivaAPI.Models;
 
-namespace ReservasDeportivasAPI.Data
+namespace ReservaDeportivaAPI.Data
 {
-    // se cerea la base de datos
     public class AppDbContext : DbContext
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) 
-            : base(options) { }
+        public AppDbContext(DbContextOptions<AppDbContext> options)
+            : base(options)
+        {
+        }
 
-        // Estas propiedades se convierten en tablas en la BD
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Reserva> Reservas { get; set; }
-        public DbSet<EspacioDeportivo> Espacios { get; set; } 
+        public DbSet<EspacioDeportivo> EspaciosDeportivos { get; set; }
+        public DbSet<HorarioDeporte> HorariosDeporte { get; set; }
+    
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -21,5 +23,5 @@ namespace ReservasDeportivasAPI.Data
                 .HasIndex(u => u.Email)
                 .IsUnique();
         }
-    }
+}
 }

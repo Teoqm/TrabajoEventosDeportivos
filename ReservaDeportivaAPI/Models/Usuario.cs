@@ -1,10 +1,14 @@
+using System;
+using System.Collections.Generic;
 
-public class Usuario
+namespace ReservaDeportivaAPI.Models
 {
-    public int Id { get; set; }
-    public string Email { get; set; }
-    public string PasswordHash { get; set; }
-    public string codigo { get; set; } // Para doble factor el codigo
-    public List<Reserva> Reservas { get; set; }
+    public class Usuario
+    {
+        public int Id { get; set; }
+        public string Email { get; set; } = string.Empty;
+public string PasswordHash { get; set; } = string.Empty;
+public string Codigo { get; set; } = string.Empty;
+public List<Reserva> Reservas { get; set; } = new List<Reserva>();
+    }
 }
-

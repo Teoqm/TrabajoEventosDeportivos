@@ -2,11 +2,9 @@
 public class EspacioDeportivo
 {
     public int Id { get; set; }
-    public string Nombre { get; set; }          // Ej: "Cancha de Fútbol 1"
-    public string Ubicacion { get; set; }       // Dirección o coordenadas
-    public int CapacidadMaxima { get; set; }    // Cantidad de personas
-    public decimal PrecioPorHora { get; set; }
-    public List<HorarioDeporte> HorariosDisponibles { get; set; }
-    public List<Reserva> Reservas { get; set; }
+    public string Nombre { get; set; } = string.Empty;
+    public string Ubicacion { get; set; } = string.Empty;
+    public List<HorarioDeporte> HorariosDisponibles { get; set; } = new List<HorarioDeporte>();
+    public List<Reserva> Reservas { get; set; } = new List<Reserva>();
 }
 
