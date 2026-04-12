@@ -1,0 +1,14 @@
+using System;
+using System.Collections.Generic;
+
+namespace ReservaDeportivaAPI.Models
+{
+    public class Usuario
+    {
+        public int Id { get; set; }
+        public string Email { get; set; } = string.Empty;
+public string PasswordHash { get; set; } = string.Empty;
+public string Codigo { get; set; } = string.Empty;
+public List<Reserva> Reservas { get; set; } = new List<Reserva>();
+    }
+}
